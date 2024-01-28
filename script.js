@@ -3,6 +3,16 @@ function updateClock() {
   const hours = now.getHours() % 12 || 12;
   const minutes = now.getMinutes();
   const seconds = now.getSeconds();
+  const targetDate = new Date("2024-05-01T09:00:00");
+  const timeRemaining = targetDate - now;
+
+  const days = Math.floor(timeRemaining / (1000 * 60 * 60 * 24));
+  const hoursRemaining = Math.floor((timeRemaining % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  const minutesRemaining = Math.floor((timeRemaining % (1000 * 60 * 60)) / (1000 * 60));
+  const secondsRemaining = Math.floor((timeRemaining % (1000 * 60)) / 1000);
+
+  const countdownElement = document.getElementById("countdown");
+  countdownElement.innerHTML = `${days} dni ${hoursRemaining} godzin ${minutesRemaining} minut ${secondsRemaining} sekund`;
 
   const hands = [
     { id: "hourHand", deg: (360 / 12) * hours + (360 / 12) * (minutes / 60), value: hours, top: 75 },
@@ -40,6 +50,15 @@ function updateClock() {
   dot.classList.add("dot");
   clock.appendChild(dot);
   clock.offsetHeight;
+
+  const startDate = new Date("2024-01-01T00:00:00");
+  const endDate = new Date("2024-05-01T09:00:00");
+  const totalTime = endDate - startDate;
+  const elapsed = now - startDate;
+
+  const progress = Math.max(0, Math.min(100, (elapsed / totalTime) * 100));
+
+  updateProgressBar(progress);
 }
 
 function updateHand(hand) {
@@ -49,6 +68,11 @@ function updateHand(hand) {
 
   element.style.transform = `translate(-50%, -100%) rotate(${deg}deg)`;
   element.innerHTML = `<div class="number" style="top: ${hand.top}%">${value}</div>`;
+}
+
+function updateProgressBar(progress) {
+  const progressBar = document.getElementById("progress-bar");
+  progressBar.style.width = `${progress}%`;
 }
 
 setInterval(updateClock, 1000);
