@@ -52,6 +52,8 @@ h1 {
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    transition: text-shadow 0.3s ease-in-out;
   }
 
   .dot {
