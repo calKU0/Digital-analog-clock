@@ -1,0 +1,66 @@
+body {
+  margin: 0;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #f0f0f0;
+}
+
+h1 {
+  font-size: 2em;
+  text-align: center;
+  margin-bottom: 100px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4); /* Add a 3D text shadow */
+}
+
+  #clock {
+    position: relative;
+    margin: auto;
+    width: 680px;
+    height: 680px;
+    border: 5px solid #333;
+    border-radius: 50%;
+    font-size: 34px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  }
+
+
+  .hand {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform-origin: 50% 100%;
+    transform: translateY(-100%) rotate(0deg);
+    white-space: nowrap;
+    height: 231.2px;
+    background: linear-gradient(to bottom, #666, #333);
+    border-radius: 8px;
+    transition: transform 0.5s ease-in-out;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); 
+  }
+
+  .number {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .dot {
+    position: absolute;
+    width: 20px;
+    height: 20px; 
+    background-color: #333;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
