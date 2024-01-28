@@ -69,7 +69,7 @@ h2 {
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0px 0px 25px rgba(255, 255, 255, 0.5);
+  box-shadow: 0 0 25px rgba(255, 255, 255, 0.5);
 }
 
 .hand {
@@ -100,4 +100,33 @@ h2 {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+
+@media only screen and (max-width: 768px) {
+  #clock {
+    width: 80vw; 
+    height: 80vw; 
+  }
+
+  .number {
+    font-size: 20px;
+  }
+
+  .hand {
+    height: 130px;
+  }
+
+  h2 {
+    font-size: 1.5em; 
+    margin: 5px 0 0;
+  }
+
+  #countdown {
+    font-size: 1em;
+    margin-top: 3px; 
+  }
+
+  #progress-bar-container {
+    width: 80%;
+  }
 }
