@@ -109,11 +109,11 @@ h2 {
   }
 
   .number {
-    font-size: 20px;
+    font-size: 15px;
   }
 
   .hand {
-    height: 130px;
+    height: 100px;
   }
 
   h2 {
@@ -128,5 +128,6 @@ h2 {
 
   #progress-bar-container {
     width: 80%;
+    margin-bottom: 90px;
   }
 }
