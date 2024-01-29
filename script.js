@@ -1,6 +1,6 @@
 function updateClock() {
   const now = new Date();
-  const hours = now.getHours() % 12 || 12;
+  const hours = now.getHours() % 24 || 24;
   const minutes = now.getMinutes();
   const seconds = now.getSeconds();
   const targetDate = new Date("2024-05-01T09:00:00");
@@ -9,16 +9,16 @@ function updateClock() {
   const days = Math.floor(timeRemaining / (1000 * 60 * 60 * 24));
   const hoursRemaining = Math.floor((timeRemaining % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
   const minutesRemaining = Math.floor((timeRemaining % (1000 * 60 * 60)) / (1000 * 60));
-  const secondsRemaining = Math.floor((timeRemaining % (1000 * 60)) / 1000);
+  const secondsRemaining = Math.ceil((timeRemaining % (1000 * 60)) / 1000);
 
   const countdownElement = document.getElementById("countdown");
   countdownElement.innerHTML = `${days} dni ${hoursRemaining} godzin ${minutesRemaining} minut ${secondsRemaining} sekund`;
 
   const hands = [
-    { id: "hourHand", deg: (360 / 12) * hours + (360 / 12) * (minutes / 60), value: hours, top: 75 },
-    { id: "hourHand1", deg: (360 / 12) * hours + (360 / 12) * (minutes / 60), value: hours, top: 60 },
-    { id: "hourHand2", deg: (360 / 12) * hours + (360 / 12) * (minutes / 60), value: hours, top: 45 },
-    { id: "hourHand3", deg: (360 / 12) * hours + (360 / 12) * (minutes / 60), value: hours, top: 30 },
+    { id: "hourHand", deg: (360 / 24) * hours + (360 / 24) * (minutes / 60), value: hours, top: 75 },
+    { id: "hourHand1", deg: (360 / 24) * hours + (360 / 24) * (minutes / 60), value: hours, top: 60 },
+    { id: "hourHand2", deg: (360 / 24) * hours + (360 / 24) * (minutes / 60), value: hours, top: 45 },
+    { id: "hourHand3", deg: (360 / 24) * hours + (360 / 24) * (minutes / 60), value: hours, top: 30 },
     { id: "minuteHand", deg: (360 / 60) * minutes + (360 / 60) * (seconds / 60), value: minutes, top: 75 },
     { id: "minuteHand1", deg: (360 / 60) * minutes + (360 / 60) * (seconds / 60), value: minutes, top: 60 },
     { id: "minuteHand2", deg: (360 / 60) * minutes + (360 / 60) * (seconds / 60), value: minutes, top: 45 },
