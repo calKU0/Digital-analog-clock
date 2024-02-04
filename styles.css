@@ -147,7 +147,7 @@ h2 {
   }
 
   #progress-bar-container {
-    width: 85%;
+    width: 90%;
     margin-bottom: 90px;
   }
 
@@ -157,6 +157,6 @@ h2 {
   }
 
   .end-date {
-    margin-right: -265px; 
+    margin-right: -250px; 
   }
 }
