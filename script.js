@@ -1,8 +1,11 @@
 function updateClock() {
   const now = new Date();
-  const hours = now.getHours() % 24 || 24;
+  let hours = now.getHours();
   const minutes = now.getMinutes();
   const seconds = now.getSeconds();
+  hours = hours % 24;
+  const displayHours = (hours === 0) ? 12 : hours;
+  
   const targetDate = new Date("2024-05-01T09:00:00");
   const timeRemaining = targetDate - now;
 
@@ -59,6 +62,13 @@ function updateClock() {
   const progress = Math.max(0, Math.min(100, (elapsed / totalTime) * 100));
 
   updateProgressBar(progress);
+
+  const startLabel = document.querySelector('.progress-label.start-date');
+  const endLabel = document.querySelector('.progress-label.end-date');
+
+  startLabel.innerHTML = formatDate(startDate);
+  endLabel.innerHTML = formatDate(endDate);
+  endLabel.style.right = `calc(${100 - progress}% + 5px)`; // Adjust as needed
 }
 
 function updateHand(hand) {
@@ -73,6 +83,11 @@ function updateHand(hand) {
 function updateProgressBar(progress) {
   const progressBar = document.getElementById("progress-bar");
   progressBar.style.width = `${progress}%`;
+}
+
+function formatDate(date) {
+  const options = { year: 'numeric', month: 'numeric', day: 'numeric' };
+  return date.toLocaleDateString('en-US', options);
 }
 
 setInterval(updateClock, 1000);
