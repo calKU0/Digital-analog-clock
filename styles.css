@@ -42,6 +42,7 @@ h2 {
 }
 
 #progress-bar-container {
+  position: relative;
   height: 25px;
   background-color: #202020;
   border: 1px solid #fff;
@@ -55,6 +56,25 @@ h2 {
   background-color: #ff69b4;
   width: 0;
   transition: width 1s ease-in-out;
+}
+
+.progress-label {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 14px;
+  color: #fff;
+  white-space: nowrap;
+}
+
+.start-date {
+  left: 0;
+  margin-left: 10px; 
+}
+
+.end-date {
+  right: 0;
+  margin-right: -350px; 
 }
 
 #clock {
@@ -127,7 +147,16 @@ h2 {
   }
 
   #progress-bar-container {
-    width: 80%;
+    width: 85%;
     margin-bottom: 90px;
+  }
+
+  .dot {
+    width: 12px;
+    height: 12px;
+  }
+
+  .end-date {
+    margin-right: -265px; 
   }
 }
