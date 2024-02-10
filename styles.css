@@ -23,6 +23,7 @@ h1 {
 #countdown-container {
   position: relative;
   margin-bottom: 10px;
+  margin-left: -110px;
 }
 
 h2 {
@@ -74,7 +75,7 @@ h2 {
 
 .end-date {
   right: 0;
-  margin-right: -350px; 
+  margin-right: -360px; 
 }
 
 #clock {
@@ -141,13 +142,17 @@ h2 {
     margin: 5px 0 0;
   }
 
+  #countdown-container{
+    margin-left: -70px;
+  }
+
   #countdown {
     font-size: 1em;
     margin-top: 3px; 
   }
 
   #progress-bar-container {
-    width: 90%;
+    width: 95%;
     margin-bottom: 90px;
   }
 
@@ -157,6 +162,6 @@ h2 {
   }
 
   .end-date {
-    margin-right: -250px; 
+    margin-right: -263px; 
   }
 }
