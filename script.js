@@ -63,8 +63,8 @@ function updateClock() {
 
   updateProgressBar(progress);
 
-  const startLabel = document.querySelector('.progress-label.start-date');
-  const endLabel = document.querySelector('.progress-label.end-date');
+  const startLabel = document.querySelector('.start-date');
+  const endLabel = document.querySelector('.end-date');
 
   startLabel.innerHTML = formatDate(startDate);
   endLabel.innerHTML = formatDate(endDate);

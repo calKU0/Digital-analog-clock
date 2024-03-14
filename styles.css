@@ -59,7 +59,10 @@ h2 {
   transition: width 1s ease-in-out;
 }
 
-.progress-label {
+.start-date {
+  left: 0;
+  top: 50%;
+  margin-left: 10px; 
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
@@ -68,14 +71,15 @@ h2 {
   white-space: nowrap;
 }
 
-.start-date {
-  left: 0;
-  margin-left: 10px; 
-}
-
 .end-date {
-  right: 0;
-  margin-right: -360px; 
+  left: 0;
+  top: 50%;
+  margin-left: 425px; 
+  margin-top: -11px; 
+  transform: translateY(-50%);
+  font-size: 14px;
+  color: #fff;
+  white-space: nowrap;
 }
 
 #clock {
@@ -143,7 +147,7 @@ h2 {
   }
 
   #countdown-container{
-    margin-left: 0px;
+    margin-left: 20px;
   }
 
   #countdown {
@@ -162,6 +166,7 @@ h2 {
   }
 
   .end-date {
-    margin-right: -250px; 
+    margin-left: 80%;
   }
+
 }
