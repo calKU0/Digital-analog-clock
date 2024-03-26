@@ -146,10 +146,6 @@ h2 {
     margin: 5px 0 0;
   }
 
-  #countdown-container{
-    margin-left: 20px;
-  }
-
   #countdown {
     font-size: 1em;
     margin-top: 3px; 
@@ -166,6 +162,6 @@ h2 {
   }
 
   .end-date {
-    margin-left: 7%;
+    margin-left: 76%;
   }
 }
