@@ -6,7 +6,7 @@ function updateClock() {
   hours = hours % 24;
   const displayHours = (hours === 0) ? 12 : hours;
   
-  const targetDate = new Date("2024-04-14T23:05:00");
+  const targetDate = new Date("2024-04-11T23:05:00");
   const timeRemaining = targetDate - now;
 
   const days = Math.floor(timeRemaining / (1000 * 60 * 60 * 24));
@@ -54,8 +54,8 @@ function updateClock() {
   clock.appendChild(dot);
   clock.offsetHeight;
 
-  const startDate = new Date("2024-03-10T00:00:00");
-  const endDate = new Date("2024-04-14T23:05:00");
+  const startDate = new Date("2024-03-10  T00:00:00");
+  const endDate = new Date("2024-04-11T23:05:00");
   const totalTime = endDate - startDate;
   const elapsed = now - startDate;
 
