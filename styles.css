@@ -47,7 +47,7 @@ h2 {
   height: 25px;
   background-color: #202020;
   border: 1px solid #fff;
-  width: 500px;
+  width: 570px;
   overflow: hidden;
   margin-bottom: 30px;
 }
@@ -74,8 +74,8 @@ h2 {
 .end-date {
   left: 0;
   top: 50%;
-  margin-left: 425px; 
-  margin-top: -11px; 
+  margin-left: 495px; 
+  margin-top: -12px; 
   transform: translateY(-50%);
   font-size: 14px;
   color: #fff;
@@ -166,7 +166,6 @@ h2 {
   }
 
   .end-date {
-    margin-left: 75%;
+    margin-left: 7%;
   }
-
 }
