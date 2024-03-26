@@ -54,7 +54,7 @@ function updateClock() {
   clock.appendChild(dot);
   clock.offsetHeight;
 
-  const startDate = new Date("2024-03-10  T00:00:00");
+  const startDate = new Date("2024-03-10T19:00:00");
   const endDate = new Date("2024-04-11T23:05:00");
   const totalTime = endDate - startDate;
   const elapsed = now - startDate;
