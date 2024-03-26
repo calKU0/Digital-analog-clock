@@ -146,6 +146,10 @@ h2 {
     margin: 5px 0 0;
   }
 
+  #countdown-container{
+    margin-left: 0px;
+  }
+
   #countdown {
     font-size: 1em;
     margin-top: 3px; 
